@@ -1,31 +1,26 @@
-import type { Metadata } from 'next'
-import { GeistSans } from 'geist/font/sans'
-import { GeistMono } from 'geist/font/mono'
+import type {Metadata} from 'next'
 import './globals.css'
+import { Poppins } from "next/font/google";
+
+const poppins = Poppins({
+    subsets: ['latin'],
+    weight: ['400', '500', '600', '700'],
+    variable: '--font-poppins'
+})
 
 export const metadata: Metadata = {
-  title: 'v0 App',
-  description: 'Created with v0',
-  generator: 'v0.dev',
+    title: 'TaDa!',
+    description: 'Celebrate your achievements with a burst of confetti and fireworks!',
 }
 
 export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode
+                                       children,
+                                   }: Readonly<{
+    children: React.ReactNode
 }>) {
-  return (
-    <html lang="en">
-      <head>
-        <style>{`
-html {
-  font-family: ${GeistSans.style.fontFamily};
-  --font-sans: ${GeistSans.variable};
-  --font-mono: ${GeistMono.variable};
-}
-        `}</style>
-      </head>
-      <body>{children}</body>
-    </html>
-  )
+    return (
+        <html lang="en">
+        <body className={poppins.className}>{children}</body>
+        </html>
+    )
 }
