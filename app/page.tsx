@@ -10,7 +10,7 @@ export default function CelebrationPage() {
     const celebrateConfetti = () => {
         const duration = 5 * 1000;
         const animationEnd = Date.now() + duration;
-        const defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0, scalar: 1.5 };
+        const defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
 
         const randomInRange = (min: number, max: number) =>
             Math.random() * (max - min) + min;
@@ -40,7 +40,6 @@ export default function CelebrationPage() {
     const handleTouch = (event: React.MouseEvent<HTMLDivElement>) => {
         confetti({
             particleCount: 150,
-            scalar: 2,
             spread: 360,
             origin: { x: event.clientX / window.innerWidth, y: event.clientY / window.innerHeight },
         })
