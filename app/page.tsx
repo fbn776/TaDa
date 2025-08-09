@@ -18,7 +18,7 @@ export default function CelebrationPage() {
             onClick={handleTouch}
         >
 
-            <div className="text-[#5259f7] text-2xl font-bold text-center opacity-20">
+            <div className="text-[#5259f7] text-2xl font-bold text-center opacity-20 select-none">
                 Click Anywhere to Celebrate!
             </div>
 
