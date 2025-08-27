@@ -1,11 +1,17 @@
 import type {Metadata} from 'next'
 import './globals.css'
-import { Poppins } from "next/font/google";
+import {Londrina_Outline, Londrina_Solid} from "next/font/google";
 
-const poppins = Poppins({
+const londrinaOutline = Londrina_Outline({
     subsets: ['latin'],
-    weight: ['400', '500', '600', '700'],
-    variable: '--font-poppins'
+    weight: '400',
+    variable: '--font-londrinaOutline'
+})
+
+const londrinaSolid = Londrina_Solid({
+    subsets: ['latin'],
+    weight: '400',
+    variable: '--font-londrinaSolid'
 })
 
 export const metadata: Metadata = {
@@ -20,7 +26,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-        <body className={poppins.className}>{children}</body>
+        <body className={`${londrinaOutline.variable} ${londrinaSolid.variable}`}>{children}</body>
         </html>
     )
 }
