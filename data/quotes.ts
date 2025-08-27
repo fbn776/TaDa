@@ -1,9 +1,5 @@
 const QUOTES = [
     {
-        quotes: "The secret of getting ahead is getting started. The secret of getting started is breaking your complex overwhelming tasks into small manageable tasks, and starting on the first one.",
-        author: "Mark Twain"
-    },
-    {
         quotes: "Acknowledge all of your small victories. They will eventually add up to something great.",
         author: null
     },
@@ -189,6 +185,10 @@ const QUOTES = [
     },
     {
         quotes: "Sometimes the randomness of life brings the most beautiful surprises.",
+        author: null
+    },
+    {
+        quotes: "One step at a time!",
         author: null
     }
 ]
